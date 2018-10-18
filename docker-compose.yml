@@ -1,0 +1,14 @@
+version: '3.6'
+services:
+  mariadb:
+    container_name: users-db
+    restart: always
+    image: mariadb:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: 'Herflik1' 
+      MYSQL_USER: 'user'
+      MYSQL_PASS: 'user'
+    volumes:
+      - my-datavolume:/var/lib/mysql
+volumes:
+  my-datavolume:
